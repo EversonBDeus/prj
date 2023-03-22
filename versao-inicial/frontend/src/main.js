@@ -17,10 +17,11 @@ import App from './App'
 import './config/bootstrap'
 import store from './config/store'
 import router from './config/router'
+import './config/msgs'
 Vue.config.productionTip = false
 
 
-require('axios').defaults.headers.common['Authorization'] = 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkV2ZXJzb24gRGV1cyIsImVtYWlsIjoiZXZlcnNvbkBob3RtYWlsLmNvbSIsImFkbWluIjp0cnVlLCJpYXQiOjE2Nzg3Mjc1MzksImV4cCI6MTY3ODk4NjczOX0.xzx-7tlZHUbNMWpsCaY62FoUDdIZGXaa4ompzr1r6I0'
+require('axios').defaults.headers.common['Authorization'] = 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkV2ZXJzb24gRGV1cyIsImVtYWlsIjoiZXZlcnNvbkBob3RtYWlsLmNvbSIsImFkbWluIjp0cnVlLCJpYXQiOjE2Nzk1MTUyNTQsImV4cCI6MTY3OTc3NDQ1NH0.9PnTdIbnp1H8-wagWfMaGPQc3kjLFNvEIi4JktG9n_w'
 
 
 new Vue({

@@ -14,9 +14,9 @@ module.exports = app =>{
         const lastStat = await Stat.findOne({}, {}, {sort: {'createdAt' : -1 } })
         // Criando uma nova estatística com os valores obtidos
         const stat = new Stat({
-            users: usersCount.cont,
-            categories: categoriesCount.cont,
-            articles: articlesCount.cont,
+            users: usersCount.count,
+            categories: categoriesCount.count,
+            articles: articlesCount.count,
             createdAt: new Date()
         })
          // Verificando se houve mudanças em relação à última estatística registrada
@@ -25,7 +25,7 @@ module.exports = app =>{
         const changeArticles = !lastStat || stat.articles !== lastStat.articles
          // Salvando a nova estatística no banco de dados, se houver mudanças
         if(changeUser || changeCategories || changeArticles){
-            stat.save().then(() => console.log('\x1b[32m%s\x1b[0m', '[Satat] Estastíticas atualizadas!' ,'\x1b[0m'));
+            stat.save().then(() => console.log('\x1b[32m%s\x1b[0m', '[Stats] Estastíticas atualizadas!' ,'\x1b[0m'));
         }
     })
 }
